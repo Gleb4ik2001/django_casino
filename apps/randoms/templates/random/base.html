@@ -1,0 +1,26 @@
+{% load static %}
+<style>
+  .reclama {text-align:  center;}
+  .ad {display: flex; justify-content: сenter;}
+  body{ background-color: rgb(252, 237, 103);}
+ </style>
+<header>
+  <div class="ad">
+    {% for banner in active_banners %}
+      <a href="https://rb.ru/opinion/bannernaya-reklama/" class="reclama"><img src="{{banner.banner_file.url}}" alt="{{ banner.name }} banner" /></a>
+    {% endfor %}
+  </div>
+  <hr>
+  <br>
+<a href="/">Home</a> | <a href="/random/wheel">WHEEL</a> | <a href="/random/slot_mashine">SLOT_MASHINE</a>
+</header>
+{% block content %} {% endblock content %}
+<footer>
+  <div class="ad">
+    {% for banner in active_banners %}
+      <a href="https://rb.ru/opinion/bannernaya-reklama/" class="reclama"><img src="{{banner.banner_file.url}}" alt="{{ banner.name }} banner" /></a>
+    {% endfor %}  
+  </div>
+      <hr>
+    <h2>© 2023 LomovVladislavProduction</h2>
+  </footer>
